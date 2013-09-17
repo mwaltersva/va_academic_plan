@@ -1,0 +1,123 @@
+{
+    "requirements": [
+        {
+            "name": "English",
+            "grade_levels": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        },
+        {
+            "name": "Mathematics",
+            "grade_levels": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        },
+        {
+            "name": "Science",
+            "grade_levels": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        },
+        {
+            "name": "Social Studies",
+            "grade_levels": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        },
+        {
+            "name": "Health and PE",
+            "grade_levels": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        },
+        {
+            "name": "Fine Arts",
+            "grade_levels": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        },
+        {
+            "name": "CTE",
+            "grade_levels": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        },
+        {
+            "name": "Foreign Lanugage",
+            "grade_levels": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        },
+        {
+            "name": "Economics or Personal Finance",
+            "grade_levels": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        },
+        {
+            "name": "Electives",
+            "grade_levels": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        },
+        {
+            "name": "Student Selected Test",
+            "grade_levels": null
+        },
+        {
+            "name": "Online Course",
+            "grade_levels": null
+        }
+    ],
+    "schedule": []
+}

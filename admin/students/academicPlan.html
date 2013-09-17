@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<!-- start right frame -->
+<head>
+    <title>Academic Plan</title>
+    
+    <link href="/images/css/screen.css" rel="stylesheet" media="screen">
+    <link href="/images/css/print.css" rel="stylesheet" media="print">
+    <style type="text/css">
+    td.bold {
+        width:15%; 
+    }
+    
+    div#add_courses_to_grade_level_div {
+        min-width: 75%;
+    }
+    h2#POS_title {
+        page-break-before: always;
+    }
+    </style>
+</head>
+
+<body>
+
+<form action="/admin/changesrecorded.white.html" method="post">
+    ~[wc:admin_header_frame_css]<!-- breadcrumb start --><a href="/admin/home.html" target="_top">~[text:psx.html.admin_students.misc.start_page]</a> &gt; <a href="home.html?selectstudent=nosearch" target="_top">~[text:psx.html.admin_students.misc.student_selection]</a> &gt; Academic Plan<!-- breadcrumb end -->~[wc:admin_navigation_frame_css]
+
+    ~[wc:title_student_begin_css]Academic Plan~[wc:title_student_end_css]
+
+    <!-- start of content and bounding box -->
+    <div class="box-round">
+        <h2>Academic Plan Overview</h2>
+        <table>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="initiation_date">Initiation Date: </label></td>
+                <td><input type="text" name="[01]wps_ap_initiation_date" value="" class="psDateWidget" id="initiation_date"></td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="graduation_year">Expected Graduation Year: </label></td>
+                <td><input type="text" name="[01]graduation_year" value="" id="graduation_year"></td>
+            </tr>
+        </table>
+        <h2>Plan Review Dates</h2>
+        <table>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="review_date_7">7th Grade:</label></td>
+                <td><input type="text" name="[01]wps_ap_review_date_7" value="" class="psDateWidget" id="review_date_7"></td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="review_date_8">8th Grade:</label></td>
+                <td><input type="text" name="[01]wps_ap_review_date_8" value="" class="psDateWidget" id="review_date_8"></td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="review_date_9">9th Grade:</label></td>
+                <td><input type="text" name="[01]wps_ap_review_date_9" value="" class="psDateWidget" id="review_date_8"></td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="review_date_10">10th Grade:</label></td>
+                <td><input type="text" name="[01]wps_ap_review_date_10" value="" class="psDateWidget" id="review_date_8"></td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="review_date_11">11th Grade:</label></td>
+                <td><input type="text" name="[01]wps_ap_review_date_11" value="" class="psDateWidget" id="review_date_8"></td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="review_date_12">12th Grade:</label></td>
+                <td><input type="text" name="[01]wps_ap_review_date_12" value="" class="psDateWidget" id="review_date_8"></td>
+            </tr>
+        </table>
+        <h2>Career Goals</h2>
+        <table>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="career_goal">Career Goal:</label></td>
+                <td><textarea name="[01]wps_ap_career_goal" value="" id="career_goal"></textarea></td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="occupation_of_interest">Occupation of Interest:</label></td>
+                <td><textarea name="[01]wps_ap_occupation_of_interest" value="" id="occupation_of_interest"></textarea></td>
+            </tr>
+        </table>
+        <h2>Career and Technical Education Information</h2>
+        <table>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="career_cluster">Career Cluster:</label></td>
+                <td>
+                    <select name="" id="career_cluster">
+                    </select><br>
+                    <input type="hidden" name="[01]va_cte_career_family_code" id="va_cte_career_family_code" value="">
+                    <p class="warning">This value effects state reporting.</p>
+                </td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="career_pathway">Career Pathway:</label></td>
+                <td>
+                    <select name="[01]wps_ap_career_pathway" id="career_pathway">
+                    </select>
+                    <input type="hidden" name="[01]wps_ap_career_pathway" id="va_cte_career_pathway">
+                </td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="career_assessment">Career Assessment:</label></td>
+                <td>
+                    <select name="[01]wps_ap_career_assessment_test" id="career_assessment">
+                        <option value="">Select...</option>
+                        <option value="wise">Wise (wise)</option>
+                        <option value="wr">Workplace Readiness (wr)</option>
+                        <option value="other">Other (other)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="career_assessment_date">Career Assessment Date:</label></td>
+                <td><input type="text" name="[01]wps_ap_career_assessment_date" value="" id="career_assessment_date" class="psDateWidget"></td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="career_assessment_result">Career Assessment Result:</label></td>
+                <td>
+                    <input type="text" name="[01]wps_ap_career_assessment_result" value="" id="career_assessment_result"><br>
+                    <input type="checkbox" name="[01]wps_ap_career_assessment_passed" value="" id="career_assessment_passed"><label for="career_assessment_passed">Passed?</label>
+                </td>
+            </tr>
+            <tr class="~[evenoddrow]">
+            <td class="bold"><label for="career_assessment_information">Career Assessment Description:</label></td>
+                <td><textarea name="[01]wps_ap_career_assessment_description" value="" id="career_assessment_description"></textarea></td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="industry_certifications">Industry Certifications:</label></td>
+                <td><textarea name="[01]wps_ap_industry_certifications" value="" id="industry_certifications"></textarea></td>
+            </tr>
+        </table>
+        <h2>Academic Goals</h2>
+        <table>
+            <tr class="~[evenoddrow]">
+                <td class="bold"><label for="diploma_goal">Diploma Goal:</label></td>
+                <td>
+                    <select name="[01]wps_ap_diploma_goal" id="diploma_goal">
+                        <option value="">Select...</option>
+                        <option value="standard">Standard</option>
+                        <option value="advanced">Advanced</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold">Diploma Recognition Goals:</td>
+                <td>
+                    <input type="checkbox" name="[01]wps_ap_early_college_scholar" value="" id="early_college_scholar">
+                    <label for="early_college_scholar">Early College Scholar</label><br>
+                    <input type="checkbox" name="[01]wps_ap_commonwealth_scholar" value="" id="commonwealth_scholar">
+                    <label for="commonwealth_scholar">Commonwealth Scholar</label>
+                    <br><br><p class="bold">Diploma Seals</p>
+                    <input type="checkbox" id="ds_governors" data-statecode="1">
+                    <label for="ds_governors">Governor's Seal</label><br>
+                    <input type="checkbox" id="ds_board_of_education" data-statecode="2">
+                    <label for="ds_board_of_education">Board of Education</label><br>
+                    <input type="checkbox" id="ds_career_and_technical_education" data-statecode="3">
+                    <label for="ds_career_and_technical_education">Board of Education Career and Technical Education</label><br>
+                    <input type="checkbox" id="ds_advanced_mathematics_and_technology" data-statecode="4">
+                    <label for="ds_advanced_mathematics_and_technology">Board of Education Advanced Mathematics and Technology</label><br>
+                    <input type="checkbox" id="ds_seal_for_excellence_in_civics_education" data-statecode="5">
+                    <label for="ds_seal_for_excellence_in_civics_education">Board of Education Seal for Excellence in Civics Edcuation</label><br>
+                    <button id="ds_copy_to_state_field" type="button">Copy to State Field</button>
+                    <p>Current State Code: <span id="current_state_diploma_seal_code"></span></p>
+                    <input type="hidden" name="[01]wps_ap_diploma_seal_code" value="" id="diploma_seal_code">
+                    <input type="hidden" name="[01]va_diploma_seal" value="" id="va_diploma_seal">
+                </td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold">Test Goals:</td>
+                <td>
+                    <input type="text" name="[01]wps_ap_sat_goal" value="" id="sat_goal"><label for="sat_goal">SAT</label><br>
+                    <input type="text" name="[01]wps_ap_act_goal" value="" id="act_goal"><label for="act_goal">ACT</label>
+                </td>
+            </tr>
+            <tr class="~[evenoddrow]">
+                <td class="bold">Post Secondary Goals:</td>
+                <td>
+                    <label for="college">College/University</label><br>
+                    <select name="[01]wps_ap_college" id="college">
+                        <option value="">Select...</option>
+                        <option value="none">None</option>
+                        <option value="undecided">Undecided</option>
+                        <option value="tradeschool">Trade School</option>
+                        <option value="2">2 Year College</option>
+                        <option value="4">4 Year College/University</option>
+                    </select><br>
+                    <label for="military">Military</label><br>
+                    <select name="[01]wps_ap_military" id="military">
+                        <option value="Select...">Select...</option>
+                        <option value="none">None</option>
+                        <option value="undecided">Undecided</option>
+                        <option value="army">Army</option>
+                        <option value="airforce">Air Force</option>
+                        <option value="coastguard">Coast Guard</option>
+                        <option value="marinecorps">Marine Corps</option>
+                        <option value="nationalguard">National Guard</option>
+                        <option value="navy">Navy</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <h2 id="POS_title">Program of Study</h2>
+        <h3 style="color: red;">Course input not currently working. Please be patient.</h3>
+        <table class="program_of_study grid" id="pos_table" style="margin: 0px; width: 100%">
+            <thead><tr class="headderrow" id="pos_header"></tr></thead>
+        </table>
+        <label for="selected_action">Group Actions: </label><select id="selected_action">
+            <option value="">Select...</option>
+            <option value="remove">Remove the selected</option>
+            <option value="copy">Copy the selected to Course Requests</option>
+        </select><button type="button" id="group_action">Go</button>
+        <input type="hidden" name="[01]wps_ap_programofstudy" value="" id="program_of_study">
+        <div class="button-row"><input type="hidden" name="ac" value="prim">~[submitbutton]</div>
+        <div id="add_courses_to_grade_level_div" style="visibility: hidden;" title="Add Courses">
+            <table id="add_courses_to_grade_level">
+                <thead>
+                    <tr><th>Grade Level</th><th>Courses</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button type="button" id="add_courses_button">Add</button>
+        </div>
+    </div>
+~[wc:admin_footer_frame_css]
+</form>
+</body>
+~[wc:commonscripts]
+<script type="text/javascript">
+    
+    var APForm = {
+        initiation_date: $j('#intiation_date'),
+        graduation_year: $j('#graduation_year'),
+        review_date_7: $j('#review_date_7'),
+        review_date_8: $j('#review_date_8'),
+        review_date_9: $j('#review_date_9'),
+        review_date_10: $j('#review_date_10'),
+        review_date_11: $j('#review_date_11'),
+        review_date_12: $j('#review_date_12'),
+        career_goal: $j('career_goal'),
+        occupation_of_interest: $j('occupation_of_interest'),
+        career_cluster: $j('#career_cluster'),
+        va_cte_career_family_code: $j('#va_cte_career_family_code'),
+        career_pathway: $j('#career_pathway'),
+        va_cte_career_pathway: $j('#va_cte_career_pathway'),
+        career_assessment: $j('#career_assessment'),
+        career_assessment_date: $j('#career_assessment_date'),
+        career_assessment_result: $j('#career_assessment_result'),
+        career_assessment_description: $j('#career_assessment_description'),
+        industry_certifications: $j('#industry_certifications'),
+        diploma_goal: $j('#diploma_goal'),
+        early_college_scholar: $j('#early_college_scholar'),
+        commonwealth_scholar: $j('#commonwealth_scholar'),
+        diploma_seal_checkboxes: [$j('#ds_governors'),
+                        $j('#ds_board_of_education'),
+                        $j('#ds_career_and_technical_education'),
+                        $j('#ds_advanced_mathematics_and_technology'),
+                        $j('#ds_seal_for_excellence_in_civics_education')],
+        diploma_seal_code: $j('#diploma_seal_code'),
+        diploma_seal_copy_to_state_field: $j('#ds_copy_to_state_field'),
+        current_state_diploma_seal_code: $j('#current_state_diploma_seal_code'),
+        va_diploma_seal: $j('#va_diploma_seal'),
+        sat_goal: $j('#sat_goal'),
+        act_goal: $j('#act_goal'),
+        college: $j('#college'),
+        military: $j('#military'),
+        program_of_study: $j('#program_of_study')
+    };
+    
+    function update_diploma_seal_checkboxes(code) {
+        if (code) {
+            for(i=0;i<=code.length;i++) {
+                $j.each(APForm.diploma_seal_checkboxes, function() {
+                    if (code[i] == $j(this).data("statecode")) {
+                        $j(this).prop("checked", true);
+                    }
+                });
+            }
+        }
+    };
+    
+    function update_diploma_seal_field() {
+        APForm.diploma_seal_code.val("");
+        var code = "";
+        $j.each(APForm.diploma_seal_checkboxes, function() {
+            if ($j(this).prop("checked") === true) {
+                code = code.concat($j(this).data("statecode"));
+            }
+        });
+        if (code.length > 0) {
+            APForm.diploma_seal_code.val(code);
+        }
+    }
+    
+    function update_state_diploma_seal_code_display() {
+        APForm.current_state_diploma_seal_code.html(APForm.va_diploma_seal.val());
+    }
+    
+    function update_state_diploma_seal_code() {
+        APForm.va_diploma_seal.val(APForm.diploma_seal_code.val());
+        update_state_diploma_seal_code_display();
+    }
+    
+    function update_career_cluster_options() {
+        APForm.career_cluster.empty();
+        var option = "<option value=\"\">Select a cluster...</option>";
+        APForm.career_cluster.append(option);
+        $j.each(CTECareerClusters, function() {
+            option = "<option value=\"" + this["state_code"] + "\">" + this["description"] + "</option>";
+            APForm.career_cluster.append(option);
+        });
+        if (APForm.va_cte_career_family_code.val()) {
+            APForm.career_cluster.val(APForm.va_cte_career_family_code.val());
+        }
+    }
+    
+    function update_state_career_cluster() {
+        APForm.va_cte_career_family_code.val(APForm.career_cluster.val());
+    }
+    
+    function update_career_pathway_options() {
+        cluster = APForm.career_cluster.val();
+        if (cluster) {
+            APForm.career_pathway.empty();
+            var option = "<option value=\"\">Select a Pathway...</option>";
+            APForm.career_pathway.append(option);
+            $j.each(CTECareerClusters, function() {
+                if (this.state_code == cluster) {
+                    $j.each(this.career_pathways, function() {
+                        option = "<option value=\"" + this.state_code + "\">" + this.description + "</option>";
+                        APForm.career_pathway.append(option);
+                    });
+                }
+            });
+            if (APForm.va_cte_career_pathway.val()) {
+                APForm.career_pathway.val(APForm.va_cte_career_pathway.val());
+            }
+        } else {
+            APForm.career_pathway.empty();
+        }
+    }
+    
+    function update_state_career_pathway() {
+        APForm.va_cte_career_pathway.val(APForm.career_pathway.val());
+    }
+    
+    function create_program_of_study_table() {
+        var grade_levels = [];
+        $j.each(ProgramOfStudy.requirements, function() {
+            if (this.grade_levels !== null) {
+                $j.each(this.grade_levels, function(index, value) {
+                    if ($j.inArray(value, grade_levels) === -1) {
+                        grade_levels.push(value);
+                    }
+                });
+            }
+        });
+        grade_levels.sort(function(a,b) { return a-b; });
+        $j('#pos_header').append("<th>Subject/Req.</th>");
+        $j.each(grade_levels, function(index, value){
+            cell = "<th data-grade_level=\"" + value + "\">" + value + "<br><a id=\"add_to_grade_level\" data-grade_level=\""+
+                value+"\">Add</a><br><a class=\"select_all\" data-grade_level=\""+value+"\" title\"Add\">Select All</a></th>";
+            $j('#pos_header').append(cell);
+        });
+        $j.each(ProgramOfStudy.requirements, function() {
+            var i = 0;
+            var req = this;
+            var num_rows = $j('#pos_table tr').length;
+            if (num_rows%2 === 0) {
+                var row_class = "evenRow";
+            } else {
+                var row_class = "oddRow";
+            }
+            if (req.grade_levels) {
+                var table_row = "<tr class=\"" + row_class + "\" data-subject=\"" + this.name + "\"><td class=\"bold\" data-row_label=\"true\">"+ req.name + "</td>";
+                $j.each(grade_levels, function(index, value) {
+                    if ($j.inArray(value, req.grade_levels) !== -1) {
+                        table_row += "<td data-grade_level=\"" + value + "\" ";
+                        if (i > 0) {
+                            table_row += "colspan=\"" + i + "\">";
+                        } else {
+                            table_row += ">";
+                        }
+                        table_row += "</td>";
+                    } else {
+                            i++;
+                    }
+                });
+            } else {
+                var table_row = "<tr class=\"" + row_class + "\" data-subject=\"" + this.name + "\"><td class=\"bold\" data-row_label=\"true\">"+ req.name + "<br><a id=\"add_to_non_grade_level\" data-subject=\"" + req.name + "\">Add</a></td>";
+                table_row += "<td colspan=\"" + grade_levels.length + "\"></td>";
+            }
+            table_row += "</tr>";
+            $j('#pos_table').append(table_row);
+        });
+    }
+    
+    function update_program_of_study_table() {
+        $j('#pos_table tr td[data-row_label!="true"]').empty();
+        if (ProgramOfStudy.schedule.length > 0) {
+            $j.each(ProgramOfStudy.schedule, function() {
+                var subject = this.subject;
+                var grade_level = this.grade_level;
+                var course_number = this.course_number;
+                $j.getJSON("course_information.json",{single_course: 1,course_number: this.course_number,studentid: ~(curstudid)}).done(function(data) {
+                    table_row = $j('#pos_table tr[data-subject="'+ subject + '"]');
+                    if (grade_level) {
+                        row_cell = table_row.children('td[data-grade_level="'+ grade_level + '"]');
+                    } else {
+                        row_cell = table_row.children('td[data-row_label!="true"]');
+                    }
+                    course_display = "<div id=\"" + data.course_number + "\"><input type=\"checkbox\" class=\"course_checkbox\" data-grade_level=\"" + grade_level + "\" data-subject=\"" + subject +
+                        "\" data-course_number=\"" + data.course_number + "\" id=\"" + grade_level+subject+data.course_number + "\"><label style=\"color: " + data.status + "\" for=\"" +
+                        grade_level+subject+data.course_number + "\">" + data.course_number + " - " + data.course_name + "</label></div>";
+                    row_cell.append(course_display);
+                });
+            });
+        }
+    }
+    
+    function select_all(grade_level) {
+        $j('#pos_table input[type="checkbox"][data-grade_level="'+grade_level+'"]').each(function() {
+            if ($j(this).is(':checked')) {
+                $j(this).attr("checked", false);
+            } else {
+                $j(this).attr("checked", true);
+            }
+        });
+    }
+    
+    function remove_selected() {
+        $j('#pos_table input.course_checkbox').each(function() {
+            if ($j(this).is(':checked')) {
+                subject = $j(this).attr("data-subject");
+                grade_level = $j(this).attr("data-grade_level");
+                course_number = $j(this).attr("data-course_number");
+                $j.map(ProgramOfStudy.schedule, function(obj, index) {
+                   if (String(obj.course_number) === course_number && String(obj.subject) === subject && String(obj.grade_level) === grade_level) {
+                       index_to_remove = index;
+                   } 
+                });
+                ProgramOfStudy.schedule.splice(index_to_remove,1);
+            }
+        });
+        update_program_of_study_table();
+    }
+    
+    function group_action(action) {
+        if (action === "remove") {
+            remove_selected();
+        }
+    }
+    
+    function split(val) {
+        return val.split( /,\s*/ );
+    }
+    
+    function extractLast(term) {
+        return split(term).pop();
+    }
+    
+    function show_add_courses_dialog(grade_level, subject) {
+        $j('table#add_courses_to_grade_level tbody').empty();
+        $j('#add_courses_to_grade_level_div').css("visibility", "visible");
+        /*$j('#add_courses_to_grade_level_div').dialog({
+            width: 450,
+            modal: false
+        });*/
+        if (grade_level) { 
+            var subjects = [];
+            $j.each(ProgramOfStudy.requirements, function() {
+                if ($j.inArray(grade_level, this.grade_levels) > -1) {
+                    $j('table#add_courses_to_grade_level tbody').append(
+                        "<tr><td class=\"bold\">" + this.name + "</td><td><input size=\"45\" type=\"text\" data-grade_level=\""+ grade_level + "\" data-subject=\""+this.name+"\"></td></tr>"
+                    );
+                }
+            });
+        } else {
+            $j('table#add_courses_to_grade_level tbody').append(
+                "<tr><td class=\"bold\">" + subject + "</td><td><input size=\"45\" type=\"text\" data-subject=\"" + subject + "\"></td></tr>"
+            );
+        }
+        $j('table#add_courses_to_grade_level tbody input').each(function() {
+            $j(this)
+                .autocomplete({
+                    source: function(request,response) {
+                        $j.getJSON("course_information.json", {
+                            term: extractLast(request.term),
+                        }, response);
+                    },
+                    search: function () {
+                        var term = extractLast(this.value);
+                        if (term.length < 2) {
+                            return false;
+                        }
+                    },/*
+                    focus: function() {
+                        return false;
+                    },*/
+                    select: function(event, ui) {
+                        var terms = split(this.value);
+                        terms.pop();
+                        terms.push(ui.item.value);
+                        terms.push("");
+                        this.value=terms.join(",");
+                        return false;
+                    }
+                });
+        });
+    }
+    
+    function add_courses() {
+        $j('table#add_courses_to_grade_level tbody input').each(function() {
+            var courses = [];
+            var subject = $j(this).data("subject");
+            var grade_level = $j(this).data("grade_level");
+            if (!grade_level) {
+                grade_level = null;
+            }
+            var s = $j(this).val();
+            s = s.replace(/,+$/, "");
+            if (s !== "") {
+                var a = s.split(",");
+                $j.each(a, function(index, value) {
+                    courses.push(value);
+                });
+            };
+            if (courses.length > 0) {
+                $j.each(courses, function(index, value) {
+                    ProgramOfStudy.schedule.push(
+                        {"subject": subject, "grade_level": grade_level, "course_number": value}
+                    );
+                });
+            }
+        });
+        update_program_of_study_table();
+    }
+    
+    function update_POS_field() {
+        APForm.program_of_study.empty();
+        APForm.program_of_study.val(JSON.stringify(ProgramOfStudy.schedule));
+    }
+    
+    function update_schedule_object() {
+        ProgramOfStudy.schedule = $j.parseJSON(APForm.program_of_study.val());
+    }
+    
+    $j(function() {
+        update_diploma_seal_checkboxes(APForm.diploma_seal_code.val());
+
+        $j(APForm.diploma_seal_checkboxes).each(function() {
+            $j(this).change(function() {
+                update_diploma_seal_field();
+            });
+        });
+        $j.getJSON("career_pathways.json").done(function(data) {
+            CTECareerClusters = data;
+            update_career_cluster_options();
+            update_career_pathway_options();
+        });
+        
+        $j.getJSON("program_of_study.json").done(function(data) {
+            ProgramOfStudy = data;
+            create_program_of_study_table();
+            if (APForm.program_of_study.val().length > 0) {
+                update_schedule_object();
+            } else {
+                ProgramOfStudy.schedule = [];
+            }
+            update_program_of_study_table();
+            
+            $j('a[class="select_all"]').each(function(){
+                $j(this).click(function() {
+                    select_all($j(this).attr("data-grade_level"));
+                });
+            });
+            
+            $j('a[id="add_to_grade_level"]').each(function() {
+                $j(this).css("visibility","visible");
+                $j(this).click(function() {
+                    show_add_courses_dialog($j(this).data("grade_level"),null);
+                });
+            });
+            
+            $j('a[id="add_to_non_grade_level"]').each(function() {
+                $j(this).click(function() {
+                    show_add_courses_dialog(null, $j(this).data("subject"));
+                });
+            });
+        });
+        
+        $j('#add_courses_button').click(function() {
+            add_courses();
+            $j('#add_courses_to_grade_level_div').dialog("close");
+        });
+        APForm.career_cluster.change(function(){
+           update_state_career_cluster();
+           update_career_pathway_options();
+           update_state_career_pathway();
+        });
+        
+        APForm.career_pathway.change(function() {
+            update_state_career_pathway();
+        });
+        
+        $j('#ds_copy_to_state_field').click(function() {
+            update_state_diploma_seal_code();
+            update_state_diploma_seal_code_display();
+        });
+        
+        $j("#group_action").click(function(){
+            group_action($j('#selected_action').val());
+            $j('#selected_action').val("");
+        });
+        
+        $j('form').submit(function() {
+           update_POS_field();
+           return true;
+        });
+    });
+</script>
+</html><!-- end right frame -->

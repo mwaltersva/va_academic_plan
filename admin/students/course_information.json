@@ -1,0 +1,46 @@
+~[if#singlecourse.~[gpv:single_course]=1]
+{~[tlist_sql;
+SELECT
+  c.course_number course_number,
+  c.course_name course_name,
+  CASE WHEN (
+      SELECT
+        CASE WHEN MAX(sg.earnedcrhrs) = MAX(sg.potentialcrhrs) THEN 'P' ELSE NULL END
+      FROM storedgrades sg
+      WHERE
+        sg.studentid = ~[gpv:studentid]
+        AND sg.course_number = c.course_number
+        AND sg.storecode = 'Y1'
+    ) = 'P'
+    THEN 'Green'
+    ELSE
+      CASE WHEN (
+        SELECT
+          count(cc.id)
+        FROM cc
+        JOIN terms t ON t.id = cc.termid AND t.schoolid = cc.schoolid
+        WHERE
+          cc.studentid = ~[gpv:studentid]
+          AND cc.course_number = c.course_number
+          AND t.yearid = ~(curyearid)
+      ) > 0 THEN 'GoldenRod'
+      ELSE 'Red' END END Progress
+FROM courses c
+WHERE
+  c.course_number = '~[gpv:course_number]'
+ORDER BY c.course_number ASC;
+]"course_number":"~(course_number)","course_name":"~(course_name)","status":"~(progress)"[/tlist_sql]}
+[else#singlecourse]
+[~[tlist_sql;
+	SELECT
+	  c.course_number course_number,
+	  c.course_number value,
+	  c.course_number || ' - ' || c.course_name course_name,
+	  LEAD (CASE WHEN c.course_number IS NOT NULL THEN CHR(44) ELSE NULL END)
+	  OVER (ORDER BY c.course_number ASC)
+	FROM courses c
+	WHERE lower(c.course_number) LIKE lower('%~[gpv:term]%')
+		OR lower(c.course_name) LIKE lower('%~[gpv:term]%')
+	ORDER BY c.course_number ASC;
+]{"id":"~(course_number)","value":"~(label)","label":"~(course_name)"}~(comma)[/tlist_sql]]
+[/if#singlecourse]

@@ -1,0 +1,415 @@
+[
+    {
+        "state_code": 1,
+        "description": "Agriculture, Food and Natural Resources",
+        "career_pathways": [
+            {
+                "state_code": "0101",
+                "description": "Food Products and Processing Systems"
+            },
+            {
+                "state_code": "0102",
+                "description": "Plant Systems"
+            },
+            {
+                "state_code": "0103",
+                "description": "Animal Systems"
+            },
+            {
+                "state_code": "0104",
+                "description": "Power, Structural & Technical Systems"
+            },
+            {
+                "state_code": "0105",
+                "description": "Natural Resources Systems"
+            },
+            {
+                "state_code": "0106",
+                "description": "Environmental Service Systems"
+            },
+            {
+                "state_code": "0107",
+                "description": "Agribusiness Systems"
+            }
+        ]
+    },
+    {
+        "state_code": 2,
+        "description": "Business and Information Technology",
+        "career_pathways": [
+            {
+                "state_code": "0201",
+                "description": "Design/Pre-Construction"
+            },
+            {
+                "state_code": "0202",
+                "description": "Construction"
+            },
+            {
+                "state_code": "0203",
+                "description": "Maintenance/Operations"
+            }
+        ]
+        
+    },
+    {
+    	"state_code": 3,
+    	"description":"Arts, Audio-Video Technology and Communications",
+    	"career_pathways": [
+		    {
+		        "state_code": "0301",
+		        "description": "Audio and Video Technology and Film"
+		    },
+		    {
+		        "state_code": "0302",
+		        "description": "Printing Technology"
+		    },
+		    {
+		        "state_code": "0303",
+		        "description": "Visual Arts"
+		    },
+		    {
+		        "state_code": "0304",
+		        "description": "Performing Arts"
+		    },
+		    {
+		        "state_code": "0305",
+		        "description": "Journalism and Broadcasting"
+		    },
+		    {
+		        "state_code": "0306",
+		        "description": "Telecommunications "
+		    }
+    	]
+    },
+    {
+    	"state_code":4,
+    	"description":"Business Management and Administration",
+    	"career_pathways": [
+		    {
+		        "state_code": "0401",
+		        "description": "General Management"
+		    },
+		    {
+		        "state_code": "0402",
+		        "description": "Business Information Management"
+		    },
+		    {
+		        "state_code": "0403",
+		        "description": "Human Resources Management"
+		    },
+		    {
+		        "state_code": "0404",
+		        "description": "Operations Management"
+		    },
+		    {
+		        "state_code": "0405",
+		        "description": "Administrative Support"
+		    }    	
+    	]
+    },
+    {
+    	"state_code":5,
+    	"description":"Education and Training",
+    	"career_pathways": [
+		    {
+		        "state_code": "0501",
+		        "description": "Administration and Administrative Support"
+		    },
+		    {
+		        "state_code": "0502",
+		        "description": "Professional Support Services"
+		    },
+		    {
+		        "state_code": "0503",
+		        "description": "Teaching/Training"
+		    }
+    	]
+    },
+    {
+    	"state_code":6,
+    	"description":"Finance",
+    	"career_pathways": [
+		    {
+		        "state_code": "0601",
+		        "description": "Securities & Investments"
+		    },
+		    {
+		        "state_code": "0602",
+		        "description": "Business Finance"
+		    },
+		    {
+		        "state_code": "0603",
+		        "description": "Accounting"
+		    },
+		    {
+		        "state_code": "0604",
+		        "description": "Insurance"
+		    },
+		    {
+		        "state_code": "0605",
+		        "description": "Banking Services"
+		    }
+    	]
+    },
+    {
+    	"state_code":7,
+    	"description":"Government and Public Administration",
+    	"career_pathways": [
+		    {
+		        "state_code": "0701",
+		        "description": "Governance"
+		    },
+		    {
+		        "state_code": "0702",
+		        "description": "National Security"
+		    },
+		    {
+		        "state_code": "0703",
+		        "description": "Foreign Service"
+		    },
+		    {
+		        "state_code": "0704",
+		        "description": "Planning"
+		    },
+		    {
+		        "state_code": "0705",
+		        "description": "Revenue and Taxation"
+		    },
+		    {
+		        "state_code": "0706",
+		        "description": "Regulation"
+		    },
+		    {
+		        "state_code": "0707",
+		        "description": "Public Management and Administration"
+		    }
+    	]
+    },
+    {
+    	"state_code":8,
+    	"description":"Health Science",
+    	"career_pathways": [
+		    {
+		        "state_code": "0801",
+		        "description": "Therapeutic Services"
+		    },
+		    {
+		        "state_code": "0802",
+		        "description": "Diagnostic Services"
+		    },
+		    {
+		        "state_code": "0803",
+		        "description": "Health Informatics"
+		    },
+		    {
+		        "state_code": "0804",
+		        "description": "Support Services"
+		    },
+		    {
+		        "state_code": "0805",
+		        "description": "Biotechnology Research and Development"
+		    }
+    	]
+    },
+    {
+    	"state_code":9,
+    	"description":"Hospitality and Tourism",
+    	"career_pathways": [
+		    {
+		        "state_code": "0901",
+		        "description": "Restaurants and Food/Beverage Services"
+		    },
+		    {
+		        "state_code": "0902",
+		        "description": "Lodging"
+		    },
+		    {
+		        "state_code": "0903",
+		        "description": "Travel & Tourism"
+		    },
+		    {
+		        "state_code": "0904",
+		        "description": "Recreation, Amusements & Attractions"
+		    }
+    	]
+    },
+    {
+    	"state_code":10,
+    	"description":"Human Services",
+    	"career_pathways": [
+		    {
+		        "state_code": "1001",
+		        "description": "Early Childhood Development & Services"
+		    },
+		    {
+		        "state_code": "1002",
+		        "description": "Counseling & Mental Health Services"
+		    },
+		    {
+		        "state_code": "1003",
+		        "description": "Family & Community Services"
+		    },
+		    {
+		        "state_code": "1004",
+		        "description": "Personal Care Services"
+		    },
+		    {
+		        "state_code": "1005",
+		        "description": "Consumer Services"
+		    }
+    	]
+    },
+    {
+    	"state_code":11,
+    	"description":"Information Technology",
+    	"career_pathways": [
+	   		{
+		        "state_code": "1101",
+		        "description": "Network Systems"
+		    },
+		    {
+		        "state_code": "1102",
+		        "description": "Information Support and Services"
+		    },
+		    {
+		        "state_code": "1103",
+		        "description": "Web and Digital Communications"
+		    },
+		    {
+		        "state_code": "1104",
+		        "description": "Programming and Software Development"
+		    }
+    	]
+    },
+    {
+    	"state_code":12,
+    	"description":"Law, Public Safety, Corrections and Security",
+    	"career_pathways": [
+		    {
+		        "state_code": "1201",
+		        "description": "Correction Services"
+		    },
+		    {
+		        "state_code": "1202",
+		        "description": "Emergency and Fire Management Services"
+		    },
+		    {
+		        "state_code": "1203",
+		        "description": "Security & Protective Services"
+		    },
+		    {
+		        "state_code": "1204",
+		        "description": "Law Enforcement Services"
+		    },
+		    {
+		        "state_code": "1205",
+		        "description": "Legal Services"
+		    }
+    	]
+    },
+    {
+    	"state_code":13,
+    	"description":"Manufacturing",
+    	"career_pathways": [
+		    {
+		        "state_code": "1301",
+		        "description": "Production"
+		    },
+		    {
+		        "state_code": "1302",
+		        "description": "Manufacturing Production Process Development"
+		    },
+		    {
+		        "state_code": "1303",
+		        "description": "Maintenance, Installation & Repair"
+		    },
+		    {
+		        "state_code": "1304",
+		        "description": "Quality Assurance"
+		    },
+		    {
+		        "state_code": "1305",
+		        "description": "Logistics & Inventory Control"
+		    },
+		    {
+		        "state_code": "1306",
+		        "description": "Health, Safety and Environmental Assurance"
+		    }
+    	]
+    },
+    {
+    	"state_code":14,
+    	"description":"Marketing",
+    	"career_pathways": [
+		    {
+		        "state_code": "1401",
+		        "description": "Marketing Management"
+		    },
+		    {
+		        "state_code": "1402",
+		        "description": "Professional Sales"
+		    },
+		    {
+		        "state_code": "1403",
+		        "description": "Merchandising"
+		    },
+		    {
+		        "state_code": "1404",
+		        "description": "Marketing Communications"
+		    },
+		    {
+		        "state_code": "1405",
+		        "description": "Marketing Research"
+		    }
+    	]
+    },
+    {
+    	"state_code":15,
+    	"description":"Science, Technology, Engineering and Mathematics",
+    	"career_pathways": [
+		    {
+		        "state_code": "1501",
+		        "description": "Engineering and Technology"
+		    },
+		    {
+		        "state_code": "1502",
+		        "description": "Science and Math"
+		    }
+    	]
+    },
+    {
+    	"state_code":16,
+    	"description":"Transportation, Distribution, and Logistics",
+    	"career_pathways": [
+		    {
+		        "state_code": "1601",
+		        "description": "Transportation Operations"
+		    },
+		    {
+		        "state_code": "1602",
+		        "description": "Logistics Planning and Management Services"
+		    },
+		    {
+		        "state_code": "1603",
+		        "description": "Warehousing and Distribution Center Operations"
+		    },
+		    {
+		        "state_code": "1604",
+		        "description": "Facility and Mobile Equipment Maintenance"
+		    },
+		    {
+		        "state_code": "1605",
+		        "description": "Transportation Systems/Infrastructure Planning, Management and Regulation"
+		    },
+		    {
+		        "state_code": "1606",
+		        "description": "Health, Safety and Environmental Management"
+		    },
+		    {
+		        "state_code": "1607",
+		        "description": "Sales and Service"
+		    }
+    	]
+    }
+]
