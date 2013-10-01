@@ -88,8 +88,10 @@
                 <td>
                     <select name="" id="career_cluster">
                     </select><br>
+                    <input type="hidden" name="[01]wps_ap_career_cluster_code" id="career_cluster_code" value="">
+                    <button id="copy_career_cluster_to_state" type="button">Copy to State Field</button>
+                    <p>Current State Code: <span id="current_state_career_family_code"></span></p>
                     <input type="hidden" name="[01]va_cte_career_family_code" id="va_cte_career_family_code" value="">
-                    <p class="warning">This value effects state reporting.</p>
                 </td>
             </tr>
             <tr class="~[evenoddrow]">
@@ -101,7 +103,7 @@
                 </td>
             </tr>
             <tr class="~[evenoddrow]">
-                <td class="bold"><label for="career_assessment">Career Assessment:</label></td>
+                <td class="bold"><label for="career_assessment">Career Credential: </label></td>
                 <td>
                     <select name="[01]wps_ap_career_assessment_test" id="career_assessment">
                         <option value="">Select...</option>
@@ -112,11 +114,11 @@
                 </td>
             </tr>
             <tr class="~[evenoddrow]">
-                <td class="bold"><label for="career_assessment_date">Career Assessment Date:</label></td>
+                <td class="bold"><label for="career_assessment_date">Career Credential Date:</label></td>
                 <td><input type="text" name="[01]wps_ap_career_assessment_date" value="" id="career_assessment_date" class="psDateWidget"></td>
             </tr>
             <tr class="~[evenoddrow]">
-                <td class="bold"><label for="career_assessment_result">Career Assessment Result:</label></td>
+                <td class="bold"><label for="career_assessment_result">Career Credential Result:</label></td>
                 <td>
                     <input type="text" name="[01]wps_ap_career_assessment_result" value="" id="career_assessment_result"><br>
                     <input type="checkbox" name="[01]wps_ap_career_assessment_passed" value="" id="career_assessment_passed"><label for="career_assessment_passed">Passed?</label>

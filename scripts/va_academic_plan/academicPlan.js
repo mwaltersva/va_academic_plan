@@ -13,7 +13,10 @@ var APForm = {
     career_goal: $j('career_goal'),
     occupation_of_interest: $j('occupation_of_interest'),
     career_cluster: $j('#career_cluster'),
+    career_cluster_code: $j('#career_cluster_code'),
+    current_state_career_family_code: $j('#current_state_career_family_code'),
     va_cte_career_family_code: $j('#va_cte_career_family_code'),
+    copy_career_cluster_to_state: $j('#copy_career_cluster_to_state'),
     career_pathway: $j('#career_pathway'),
     va_cte_career_pathway: $j('#va_cte_career_pathway'),
     career_assessment: $j('#career_assessment'),
@@ -97,16 +100,34 @@ function update_career_cluster_options() {
         option = "<option value=\"" + this["state_code"] + "\">" + this["description"] + "</option>";
         APForm.career_cluster.append(option);
     });
-    if (APForm.va_cte_career_family_code.val()) {
-        APForm.career_cluster.val(APForm.va_cte_career_family_code.val());
+    if (APForm.career_cluster_code.val()) {
+        APForm.career_cluster.val(APForm.career_cluster_code.val());
+    } else {
+        if (APForm.va_cte_career_family_code.val()) {
+            APForm.career_cluster.val(APForm.va_cte_career_family_code.val());
+            update_career_cluster_code();
+        }
     }
+}
+
+function update_career_cluster_code() {
+    /*
+     * Updates the career_cluster_code field
+     */
+    APForm.career_cluster_code.val(APForm.career_cluster.val());
+}
+
+function update_state_career_cluster_display() {
+    APForm.current_state_career_family_code.empty();
+    APForm.current_state_career_family_code.append(APForm.va_cte_career_family_code.val());
 }
 
 function update_state_career_cluster() {
     /*
      * Updates the state career cluster code
      */
-    APForm.va_cte_career_family_code.val(APForm.career_cluster.val());
+    APForm.va_cte_career_family_code.val(APForm.career_cluster_code.val());
+    update_state_career_cluster_display();
 }
 
 function update_career_pathway_options() {
@@ -371,14 +392,20 @@ $j(function() {
         });
     });
     
+    update_state_career_cluster_display();
+    
     $j('#add_courses_button').click(function() {
         add_courses();
         $j('#add_courses_to_grade_level_div').dialog("close");
     });
     APForm.career_cluster.change(function(){
-       update_state_career_cluster();
+       update_career_cluster_code();
        update_career_pathway_options();
        update_state_career_pathway();
+    });
+    
+    APForm.copy_career_cluster_to_state.click(function() {
+        update_state_career_cluster();
     });
     
     APForm.career_pathway.change(function() {
